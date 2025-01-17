@@ -11,7 +11,56 @@
 	<title>14. rész</title>
 </head>
 <body>
-	
+	<header>
+		<nav class="navbar bg-body-tertiary" data-bs-theme="dark">
+			<div class="container-fluid">
+				<span class="navbar-brand mb-0 h1">Szamkitaláló játék</span>
+			</div>
+		</nav>
+	</header>
+	<main>
+		<form class="mt-3 mb-2">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="mb-3 col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
+						<label for="numberInput" class="form-label">Tipp</label>
+						<input type="number" class="form-control js-guess-field" id="numberInput"
+						       aria-describedby="numberHelp"
+						       step="1" min="1" max="100" name="guess">
+						<div class="invalid-feedback">Adj meg egy helyes tippet!</div>
+						<div id="emailHelp" class="form-text">Adj meg egy egész számot 1 és 100között.</div>
+					</div>
+					<div class="mb-3 form-check col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
+						<button type="submit" class="btn btn-success js-guess-submit-button">Tipp beküldés</button>
+						<button class="btn btn btn-warning js-new-game-button">Új játék</button>
+					</div>
+				</div>
+			</div>
+		</form>
+		<div class="container-fluid mb-5 mt-2 js-guess-container">
+			<div class="row">
+				<div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4 alert alert-success"
+				     role="alert">
+					44 - gratulálok, nyertél
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4 alert alert-warning"
+				     role="alert">
+					65 - a keresett szám kisebb
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4 alert alert-primary"
+				     role="alert">
+					25 - a keresett szám nagyobb
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
+		Számkitaláló játék
+	</footer>
 	<script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="./szamkitalalo_projekt.js"></script>
 </body>
